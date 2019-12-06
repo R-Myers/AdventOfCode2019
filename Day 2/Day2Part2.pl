@@ -35,13 +35,13 @@ sub instructions{
 
 	for (my $i = 0; $i < scalar @{$values}; $i+=4){
 		
-		if($values->[$i] == 1)  { 
+		if($values->[$i] == 1)  { #Add
 			$values->[$values->[$i+3]] = $values->[$values->[$i+1]] + $values->[$values->[$i+2]];
 		}
-		if($values->[$i] == 2) {  
+		if($values->[$i] == 2) {  #Mult
 			$values->[$values->[$i+3]] = $values->[$values->[$i+1]] * $values->[$values->[$i+2]];
 		}
-		if($values->[$i] == 99) {  
+		if($values->[$i] == 99) {  #End
 			last;
 		}
 		
